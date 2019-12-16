@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsTest", "WinFormsTest\WinFormsTest.csproj", "{BB3E0D85-688D-45F2-9DC7-7D9C1893327C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm_HandWritingRecognition", "WinForm_HandWritingRecognition\WinForm_HandWritingRecognition.csproj", "{D00EF501-2887-4CBC-B6B3-E474C965BF40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_Base", "WinForm_HandWritingRecognition\InkRecognition_Base.csproj", "{D00EF501-2887-4CBC-B6B3-E474C965BF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition", "InkRecognition\InkRecognition.csproj", "{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_WPF", "InkRecognition\InkRecognition_WPF.csproj", "{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition2", "InkRecognition2\InkRecognition2.csproj", "{4D53C453-BD19-43BB-B937-C2971E7EDAAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_Winform", "InkRecognition2\InkRecognition_Winform.csproj", "{4D53C453-BD19-43BB-B937-C2971E7EDAAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

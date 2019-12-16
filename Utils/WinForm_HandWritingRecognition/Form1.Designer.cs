@@ -1,4 +1,4 @@
-﻿namespace WinForm_HandWritingRecognition
+﻿namespace InkRecognition_Base
 {
     partial class Form1
     {

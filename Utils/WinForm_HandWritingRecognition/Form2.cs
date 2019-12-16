@@ -26,7 +26,7 @@ using System.Windows.Forms;
 // The Ink namespace, which contains the Tablet PC Platform API
 using Microsoft.Ink;
 
-namespace WinForm_HandWritingRecognition
+namespace InkRecognition_Base
 {
     /// <summary>
     /// The InkRecognition Sample Application form class

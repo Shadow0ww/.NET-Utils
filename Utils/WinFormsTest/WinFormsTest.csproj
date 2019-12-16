@@ -13,12 +13,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WinFormsTest</RootNamespace>
     <AssemblyName>WinFormsTest</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -75,7 +76,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,21 +94,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InkRecognition2\InkRecognition2.csproj">
+    <ProjectReference Include="..\InkRecognition2\InkRecognition_Winform.csproj">
       <Project>{4d53c453-bd19-43bb-b937-c2971e7edaab}</Project>
-      <Name>InkRecognition2</Name>
+      <Name>InkRecognition_Winform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InkRecognition\InkRecognition.csproj">
+    <ProjectReference Include="..\InkRecognition\InkRecognition_WPF.csproj">
       <Project>{8f948f36-ed2d-4d33-a1b1-55f406ae0a62}</Project>
-      <Name>InkRecognition</Name>
+      <Name>InkRecognition_WPF</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{10c02f09-5ec4-4ccd-b0f9-95165989fb6f}</Project>
       <Name>Utils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WinForm_HandWritingRecognition\WinForm_HandWritingRecognition.csproj">
+    <ProjectReference Include="..\WinForm_HandWritingRecognition\InkRecognition_Base.csproj">
       <Project>{d00ef501-2887-4cbc-b6b3-e474c965bf40}</Project>
-      <Name>WinForm_HandWritingRecognition</Name>
+      <Name>InkRecognition_Base</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using Utils.Common;
 using Utils.Demo;
 using Utils.Win32_API;
-using WinForm_HandWritingRecognition;
+using InkRecognition_Base;
 
 namespace WinFormsTest
 {
@@ -101,13 +101,13 @@ namespace WinFormsTest
 
         private void button3_Click(object sender, EventArgs e)
         {
-            WinForm_HandWritingRecognition.Form1 frm = new WinForm_HandWritingRecognition.Form1();
+            InkRecognition_Base.Form1 frm = new InkRecognition_Base.Form1();
             frm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            WinForm_HandWritingRecognition.InkRecognition frm = new WinForm_HandWritingRecognition.InkRecognition();
+            InkRecognition_Base.InkRecognition frm = new InkRecognition_Base.InkRecognition();
             frm.ShowDialog();
         }
 

@@ -33,7 +33,7 @@ using Microsoft.Ink;////引用：Micosoft Tablet PC
 
 
 
-namespace WinForm_HandWritingRecognition
+namespace InkRecognition_Base
 {
     /// <summary>
     /// 手写识别
