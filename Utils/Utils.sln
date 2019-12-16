@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{10C02F09-5EC4-4CCD-B0F9-95165989FB6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsTest", "WinFormsTest\WinFormsTest.csproj", "{BB3E0D85-688D-45F2-9DC7-7D9C1893327C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm_HandWritingRecognition", "WinForm_HandWritingRecognition\WinForm_HandWritingRecognition.csproj", "{D00EF501-2887-4CBC-B6B3-E474C965BF40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition", "InkRecognition\InkRecognition.csproj", "{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition2", "InkRecognition2\InkRecognition2.csproj", "{4D53C453-BD19-43BB-B937-C2971E7EDAAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10C02F09-5EC4-4CCD-B0F9-95165989FB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C02F09-5EC4-4CCD-B0F9-95165989FB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C02F09-5EC4-4CCD-B0F9-95165989FB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C02F09-5EC4-4CCD-B0F9-95165989FB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3E0D85-688D-45F2-9DC7-7D9C1893327C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3E0D85-688D-45F2-9DC7-7D9C1893327C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3E0D85-688D-45F2-9DC7-7D9C1893327C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3E0D85-688D-45F2-9DC7-7D9C1893327C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00EF501-2887-4CBC-B6B3-E474C965BF40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00EF501-2887-4CBC-B6B3-E474C965BF40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00EF501-2887-4CBC-B6B3-E474C965BF40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00EF501-2887-4CBC-B6B3-E474C965BF40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F948F36-ED2D-4D33-A1B1-55F406AE0A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {360DC4EC-318D-4B7A-AB82-11D80A39F6DD}
+	EndGlobalSection
+EndGlobal

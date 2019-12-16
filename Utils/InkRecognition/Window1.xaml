@@ -1,0 +1,30 @@
+﻿<Window x:Class="InkRecognition.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="InkRecognition" Height="428.75" Width="736.125" 
+    >
+    <Canvas Name="theRootCanvas" Margin="0,0,8,4">
+        <Border
+      Background="White"
+      BorderBrush="Black"
+      BorderThickness="2"
+      Height="300"
+      Width="706"
+      Canvas.Top="10"
+      Canvas.Left="10">
+            <InkCanvas Name="theInkCanvas"></InkCanvas>
+        </Border>
+        <TextBox Name="textBox1"
+      Height="25"
+      Width="631"
+      Canvas.Top="325"
+      Canvas.Left="10"></TextBox>
+        <Button
+      Height="25"
+      Width="75"
+      Canvas.Top="325"
+      Canvas.Left="641"
+      Click="buttonClick">Recognize</Button>
+        <Button x:Name="btnClear" Content="Clear Canvas" Canvas.Left="10" Canvas.Top="367" Width="166" Click="btnClear_Click"/>
+    </Canvas>
+</Window>
