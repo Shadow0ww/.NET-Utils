@@ -94,21 +94,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InkRecognition2\InkRecognition_Winform.csproj">
+    <ProjectReference Include="..\InkRecognitionDemo\InkRecognition_Base\InkRecognition_Base.csproj">
+      <Project>{d00ef501-2887-4cbc-b6b3-e474c965bf40}</Project>
+      <Name>InkRecognition_Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InkRecognitionDemo\InkRecognition_Winform\InkRecognition_Winform.csproj">
       <Project>{4d53c453-bd19-43bb-b937-c2971e7edaab}</Project>
       <Name>InkRecognition_Winform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InkRecognition\InkRecognition_WPF.csproj">
+    <ProjectReference Include="..\InkRecognitionDemo\InkRecognition_WPF\InkRecognition_WPF.csproj">
       <Project>{8f948f36-ed2d-4d33-a1b1-55f406ae0a62}</Project>
       <Name>InkRecognition_WPF</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{10c02f09-5ec4-4ccd-b0f9-95165989fb6f}</Project>
       <Name>Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinForm_HandWritingRecognition\InkRecognition_Base.csproj">
-      <Project>{d00ef501-2887-4cbc-b6b3-e474c965bf40}</Project>
-      <Name>InkRecognition_Base</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
