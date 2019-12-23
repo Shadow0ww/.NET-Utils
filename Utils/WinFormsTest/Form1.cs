@@ -3,7 +3,9 @@ using System.Windows.Forms;
 using Utils.Common;
 using Utils.Demo;
 using Utils.Win32_API;
-using InkRecognition_Base;
+using System.Threading;
+using System.ComponentModel;
+using Utils.ComonForm;
 
 namespace WinFormsTest
 {
@@ -14,25 +16,51 @@ namespace WinFormsTest
             InitializeComponent();
         }
 
+        #region 设备检测
         private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            this.progressBar1.Visible = true;
+
+            Thread fThread = new Thread(new ThreadStart(AllUsbDevices));
+            fThread.Start();
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.backgroundWorker1.RunWorkerAsync(); // 运行 backgroundWorker 组件
+            ProcessForm form = new ProcessForm(this.backgroundWorker1);// 显示进度条窗体
+            form.ShowDialog(this);
+            form.Close();
+        }
+        /// <summary>
+        /// 设备检测
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AllUsbDevices()
         {
             try
             {
-                richTextBox1.Clear();
+                SetProgressBar(0);
 
                 PnPEntityInfo[] allDevice = DeviceUtils.AllUsbDevices;
-                foreach (var device in allDevice)
+                //foreach (var device in allDevice)
+                //{
+                //    SetTextBoxValue(device);
+                //}
+                for (int i = 0; i < allDevice.Length - 1; i++)
                 {
-                    richTextBox1.AppendText("设备安装类GUID   ClassGuid    " + device.ClassGuid + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText("设备描述         Description  " + device.Description + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText("设备名称         Name         " + device.Name + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText("设备ID           PNPDeviceID  " + device.PNPDeviceID + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText("产品编号         ProductID    " + device.ProductID + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText("供应商标识       VendorID     " + device.VendorID + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText("服务             Service      " + device.Service + FileUtils.NEW_LINE_SPACE);
-                    richTextBox1.AppendText(FileUtils.NEW_LINE_SPACE);
+                    Thread.Sleep(100);
+
+                    SetTextBoxValue(allDevice[i]);
+
+                    SetProgressBar((int)((double)i / (double)allDevice.Length * 100.00));
                 }
 
+
+                SetProgressBar(100);
             }
             catch (Exception)
             {
@@ -41,6 +69,99 @@ namespace WinFormsTest
             }
         }
 
+        /// <summary>
+        /// 进度条
+        /// </summary>
+        /// <param name="ipos"></param>
+        private delegate void SetPos(int ipos);
+
+        ///代理
+        /// <summary>
+        /// 进度条
+        /// </summary>
+        /// <param name="ipos"></param>
+        private void SetProgressBar(int ipos)
+        {
+            if (progressBar1.InvokeRequired)
+            {
+                SetPos setpos = new SetPos(SetProgressBar);
+                this.Invoke(setpos, new object[] { ipos });
+            }
+            else
+            {
+                this.progressBar1.Value = Convert.ToInt32(ipos);
+                if (ipos == 100)
+                {
+                    this.progressBar1.Visible = false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 结果赋值
+        /// </summary>
+        private delegate void SetTextBox(PnPEntityInfo info);
+
+        ///代理
+        /// <summary>
+        /// 结果赋值
+        /// </summary>
+        private void SetTextBoxValue(PnPEntityInfo info)
+        {
+            if (progressBar1.InvokeRequired)
+            {
+                SetTextBox setpos = new SetTextBox(SetTextBoxValue);
+                this.Invoke(setpos, new object[] { info });
+            }
+            else
+            {
+                richTextBox1.AppendText("设备安装类GUID   ClassGuid    " + info.ClassGuid + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText("设备描述         Description  " + info.Description + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText("设备名称         Name         " + info.Name + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText("设备ID           PNPDeviceID  " + info.PNPDeviceID + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText("产品编号         ProductID    " + info.ProductID + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText("供应商标识       VendorID     " + info.VendorID + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText("服务             Service      " + info.Service + FileUtils.NEW_LINE_SPACE);
+                richTextBox1.AppendText(FileUtils.NEW_LINE_SPACE);
+            }
+        }
+
+        /// <summary>
+        /// 进度条2
+        /// 你可以在这个方法内，实现你的调用，方法等。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+            for (int i = 0; i < 100; i++)
+            {
+                Thread.Sleep(100);
+                worker.ReportProgress(i);
+                if (worker.CancellationPending)  // 如果用户取消则跳出处理数据代码 
+                {
+                    e.Cancel = true;
+                    break;
+                }
+            }
+
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+            }
+            else if (e.Cancelled)
+            {
+            }
+            else
+            {
+            }
+        }
+        #endregion
 
         #region 委托测试
         //委托
@@ -125,8 +246,6 @@ namespace WinFormsTest
         }
 
         #endregion
-
-
 
         #region 声音播放
         private void button10_Click(object sender, EventArgs e)
