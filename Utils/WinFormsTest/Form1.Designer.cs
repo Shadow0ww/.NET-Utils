@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -53,6 +54,13 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.button12 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.button15 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -62,6 +70,7 @@
             this.panel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -106,7 +115,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button12);
+            this.panel2.Controls.Add(this.button15);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 370);
@@ -114,22 +123,13 @@
             this.panel2.Size = new System.Drawing.Size(786, 51);
             this.panel2.TabIndex = 3;
             // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(134, 6);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(123, 37);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "进度条2";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -323,6 +323,74 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.button12);
+            this.tabPage5.Controls.Add(this.progressBar2);
+            this.tabPage5.Controls.Add(this.button14);
+            this.tabPage5.Controls.Add(this.button13);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(792, 424);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "窗体样式";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(8, 12);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(93, 23);
+            this.button13.TabIndex = 0;
+            this.button13.Text = "进度条:异步";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(8, 41);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(93, 23);
+            this.button14.TabIndex = 0;
+            this.button14.Text = "进度条:同步";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar2.Location = new System.Drawing.Point(61, 116);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(671, 34);
+            this.progressBar2.TabIndex = 4;
+            this.progressBar2.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(9, 71);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(92, 23);
+            this.button12.TabIndex = 5;
+            this.button12.Text = "通知栏提示";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(146, 7);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(123, 37);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "USB插拔监控";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -340,6 +408,7 @@
             this.panel3.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -370,7 +439,13 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button15;
+        public System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
