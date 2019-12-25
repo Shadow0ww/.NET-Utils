@@ -101,6 +101,10 @@
       <Project>{d00ef501-2887-4cbc-b6b3-e474c965bf40}</Project>
       <Name>InkRecognition_Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\InkRecognitionDemo\InkRecognition_PointCollection\InkRecognition_PointCollection.csproj">
+      <Project>{92fc3501-f571-4f90-b407-9aa893e002be}</Project>
+      <Name>InkRecognition_PointCollection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InkRecognitionDemo\InkRecognition_Winform\InkRecognition_Winform.csproj">
       <Project>{4d53c453-bd19-43bb-b937-c2971e7edaab}</Project>
       <Name>InkRecognition_Winform</Name>

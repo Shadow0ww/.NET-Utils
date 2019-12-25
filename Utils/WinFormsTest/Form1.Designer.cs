@@ -35,6 +35,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -53,14 +54,14 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.button12 = new System.Windows.Forms.Button();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -122,6 +123,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(786, 51);
             this.panel2.TabIndex = 3;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(146, 7);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(123, 37);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "USB插拔监控";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // tabControl1
             // 
@@ -201,6 +212,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button16);
             this.tabPage3.Controls.Add(this.button10);
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button5);
@@ -225,31 +237,31 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(9, 101);
+            this.button6.Location = new System.Drawing.Point(8, 101);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(105, 23);
             this.button6.TabIndex = 2;
-            this.button6.Text = "手写识别4";
+            this.button6.Text = "手写识别_实时";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(9, 72);
+            this.button5.Location = new System.Drawing.Point(8, 72);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(105, 23);
             this.button5.TabIndex = 2;
-            this.button5.Text = "手写识别3";
+            this.button5.Text = "手写识别_WPF";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(9, 42);
+            this.button4.Location = new System.Drawing.Point(8, 42);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(105, 23);
             this.button4.TabIndex = 1;
-            this.button4.Text = "手写识别2";
+            this.button4.Text = "手写识别_初始2";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -257,9 +269,9 @@
             // 
             this.button3.Location = new System.Drawing.Point(8, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(105, 23);
             this.button3.TabIndex = 0;
-            this.button3.Text = "手写识别";
+            this.button3.Text = "手写识别_初始";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -316,13 +328,6 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.WorkerSupportsCancellation = true;
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.button12);
@@ -336,25 +341,15 @@
             this.tabPage5.Text = "窗体样式";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // button12
             // 
-            this.button13.Location = new System.Drawing.Point(8, 12);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(93, 23);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "进度条:异步";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(8, 41);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(93, 23);
-            this.button14.TabIndex = 0;
-            this.button14.Text = "进度条:同步";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button12.Location = new System.Drawing.Point(9, 71);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(92, 23);
+            this.button12.TabIndex = 5;
+            this.button12.Text = "通知栏提示";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // progressBar2
             // 
@@ -366,30 +361,47 @@
             this.progressBar2.TabIndex = 4;
             this.progressBar2.Visible = false;
             // 
-            // button12
+            // button14
             // 
-            this.button12.Location = new System.Drawing.Point(9, 71);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(92, 23);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "通知栏提示";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button14.Location = new System.Drawing.Point(8, 41);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(93, 23);
+            this.button14.TabIndex = 0;
+            this.button14.Text = "进度条:同步";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(8, 12);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(93, 23);
+            this.button13.TabIndex = 0;
+            this.button13.Text = "进度条:异步";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             // 
-            // button15
+            // button16
             // 
-            this.button15.Location = new System.Drawing.Point(146, 7);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(123, 37);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "USB插拔监控";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button16.Location = new System.Drawing.Point(8, 131);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(105, 23);
+            this.button16.TabIndex = 4;
+            this.button16.Text = "手写识别_点采集";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // Form1
             // 
@@ -398,7 +410,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "测试窗体";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -446,6 +458,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button15;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button16;
     }
 }
 

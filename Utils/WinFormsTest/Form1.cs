@@ -356,7 +356,11 @@ namespace WinFormsTest
             frm.ShowDialog();
 
         }
-
+        private void button16_Click(object sender, EventArgs e)
+        {
+            InkRecognition_PointCollection.Form1 frm = new InkRecognition_PointCollection.Form1();
+            frm.ShowDialog();
+        }
         #endregion
 
         #region 声音播放
@@ -514,6 +518,7 @@ namespace WinFormsTest
             Thread.Sleep(timeout);
             notifyIcon1.Visible = false;
         }
+
         #endregion
 
 

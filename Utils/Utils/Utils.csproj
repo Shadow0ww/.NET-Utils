@@ -65,6 +65,8 @@
       <DependentUpon>ProcessForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Demo\DelegateDemo1.cs" />
+    <Compile Include="Demo\Factory_Pattern.cs" />
+    <Compile Include="Demo\SingleInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Win32 API\A_DataType.cs" />
     <Compile Include="Win32 API\Battery.cs" />

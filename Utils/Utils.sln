@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_WPF", "InkRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_Winform", "InkRecognitionDemo\InkRecognition_Winform\InkRecognition_Winform.csproj", "{4D53C453-BD19-43BB-B937-C2971E7EDAAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_PointCollection", "InkRecognitionDemo\InkRecognition_PointCollection\InkRecognition_PointCollection.csproj", "{92FC3501-F571-4F90-B407-9AA893E002BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D53C453-BD19-43BB-B937-C2971E7EDAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FC3501-F571-4F90-B407-9AA893E002BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FC3501-F571-4F90-B407-9AA893E002BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FC3501-F571-4F90-B407-9AA893E002BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FC3501-F571-4F90-B407-9AA893E002BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
