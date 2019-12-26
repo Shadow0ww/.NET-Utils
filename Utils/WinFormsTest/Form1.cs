@@ -8,6 +8,8 @@ using System.ComponentModel;
 using Utils.ComonForm;
 using LibUsbDotNet.DeviceNotify;
 using LibUsbDotNet.DeviceNotify.Info;
+using System.Collections.Generic;
+using System.Text;
 
 namespace WinFormsTest
 {
@@ -331,7 +333,6 @@ namespace WinFormsTest
         #endregion
 
         #region 手写识别
-
         private void button3_Click(object sender, EventArgs e)
         {
             InkRecognition_Base.Form1 frm = new InkRecognition_Base.Form1();
@@ -356,6 +357,7 @@ namespace WinFormsTest
             frm.ShowDialog();
 
         }
+
         private void button16_Click(object sender, EventArgs e)
         {
             InkRecognition_PointCollection.Form1 frm = new InkRecognition_PointCollection.Form1();
@@ -390,7 +392,6 @@ namespace WinFormsTest
         #endregion
 
         #region 窗体样式
-
         /// <summary>
         /// 进度条1
         /// </summary>
@@ -519,8 +520,99 @@ namespace WinFormsTest
             notifyIcon1.Visible = false;
         }
 
-        #endregion
+        /// <summary>
+        /// 选择文件(单选)
+        /// Filter 属性 赋值为一字符串 用于过滤文件类型 
+        /// 字符串说明如下：
+        ///     ‘|’分割的两个，一个是注释，一个是真的Filter，显示出来的是那个注释。如果要一次显示多中类型的文件，用分号分开。
+        ///     如：Open1.Filter="图片文件(*.jpg,*.gif,*.bmp)|*.jpg;*.gif;*.bmp";
+        ///     则过滤的文件类型为 “|”号右边的 *.jpg;*.gif;*.bmp 三种类型文件，在OpenDialog/SaveDialog中显示给用户看的文件类型字符串则是 ：“|”号  左边的 图片文件(*.jpg,*.gif,*.bmp)。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button17_Click(object sender, EventArgs e)
+        {
+            string filePath = "";
 
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.AutoUpgradeEnabled = true;   //保存之前选择的路径
+            dialog.Multiselect = false;         //该值确定是否可以选择多个文件
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = dialog.FileName;
+            }
+
+            MessageBox.Show("选择文件：" + filePath);
+        }
+
+        /// <summary>
+        /// 选择文件(单选)
+        /// 之需要修改Multiselect参数，获取FileNames即可
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button18_Click(object sender, EventArgs e)
+        {
+            List<string> paths = new List<string>();
+
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.AutoUpgradeEnabled = true;   //保存之前选择的路径
+            dialog.Multiselect = true;          //该值确定是否可以选择多个文件
+            dialog.Title = "请选择文件夹";
+            dialog.Filter = "所有文件(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                var files = dialog.FileNames;
+                paths.AddRange(files);
+            }
+
+            StringBuilder sb = new StringBuilder();
+            foreach (string path in paths)
+            {
+                sb.Append("选择文件：" + path + "\r\n");
+            }
+            MessageBox.Show(sb.ToString());
+        }
+
+        /// <summary>
+        /// 选择文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button19_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "请选择Txt所在文件夹";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (string.IsNullOrEmpty(dialog.SelectedPath))
+                {
+                    MessageBox.Show(this, "文件夹路径不能为空", "提示");
+                    return;
+                }
+                //this.LoadingText = "处理中...";
+                //this.LoadingDisplay = true;
+                //Action<string> a = DaoRuData;
+                //a.BeginInvoke(dialog.SelectedPath, asyncCallback, a);
+                string selPath = dialog.SelectedPath;
+                MessageBox.Show(selPath);
+
+            }
+        }
+
+        /// <summary>
+        /// 打开文件夹、文件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button20_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("ExpLorer", @"C:\Users");
+            System.Diagnostics.Process.Start("ExpLorer", @"C:\WINDOWS\system32\notepad.exe");
+        }
+        #endregion
 
     }
 }

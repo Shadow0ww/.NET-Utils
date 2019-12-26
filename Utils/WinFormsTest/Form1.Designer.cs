@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button16 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,7 +62,10 @@
             this.button13 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -225,6 +229,16 @@
             this.tabPage3.Text = "功能测试";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(8, 131);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(105, 23);
+            this.button16.TabIndex = 4;
+            this.button16.Text = "手写识别_点采集";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(135, 12);
@@ -330,8 +344,12 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button12);
             this.tabPage5.Controls.Add(this.progressBar2);
+            this.tabPage5.Controls.Add(this.button20);
+            this.tabPage5.Controls.Add(this.button19);
+            this.tabPage5.Controls.Add(this.button18);
+            this.tabPage5.Controls.Add(this.button17);
+            this.tabPage5.Controls.Add(this.button12);
             this.tabPage5.Controls.Add(this.button14);
             this.tabPage5.Controls.Add(this.button13);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
@@ -393,15 +411,45 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             // 
-            // button16
+            // button17
             // 
-            this.button16.Location = new System.Drawing.Point(8, 131);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(105, 23);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "手写识别_点采集";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button17.Location = new System.Drawing.Point(157, 12);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(99, 23);
+            this.button17.TabIndex = 6;
+            this.button17.Text = "打开文件(单选)";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(157, 41);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(99, 23);
+            this.button18.TabIndex = 6;
+            this.button18.Text = "打开文件(单选)";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(157, 70);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(99, 23);
+            this.button19.TabIndex = 6;
+            this.button19.Text = "选择文件夹";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(157, 99);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(99, 23);
+            this.button20.TabIndex = 7;
+            this.button20.Text = "打开文件/夹";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // Form1
             // 
@@ -459,6 +507,10 @@
         private System.Windows.Forms.Button button15;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
     }
 }
 
