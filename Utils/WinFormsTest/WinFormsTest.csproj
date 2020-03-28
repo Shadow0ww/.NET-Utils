@@ -13,7 +13,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WinFormsTest</RootNamespace>
     <AssemblyName>WinFormsTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -112,6 +112,10 @@
     <ProjectReference Include="..\InkRecognitionDemo\InkRecognition_WPF\InkRecognition_WPF.csproj">
       <Project>{8f948f36-ed2d-4d33-a1b1-55f406ae0a62}</Project>
       <Name>InkRecognition_WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenCvSharp\OpenCvSharp_Demo001\OpenCvSharp_Demo001.csproj">
+      <Project>{51f1681d-ca45-4ca0-a60f-8f86b1a034c3}</Project>
+      <Name>OpenCvSharp_Demo001</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{10c02f09-5ec4-4ccd-b0f9-95165989fb6f}</Project>

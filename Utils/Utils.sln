@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_Winform", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRecognition_PointCollection", "InkRecognitionDemo\InkRecognition_PointCollection\InkRecognition_PointCollection.csproj", "{92FC3501-F571-4F90-B407-9AA893E002BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenCvSharp", "OpenCvSharp", "{77233F54-7D1F-4627-AFAF-B483C53DC000}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InkRecognition", "InkRecognition", "{D65E3638-A9E1-4878-AF2D-2D6B079452E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCvSharp_Demo001", "OpenCvSharp\OpenCvSharp_Demo001\OpenCvSharp_Demo001.csproj", "{51F1681D-CA45-4CA0-A60F-8F86B1A034C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,9 +51,20 @@ Global
 		{92FC3501-F571-4F90-B407-9AA893E002BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FC3501-F571-4F90-B407-9AA893E002BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92FC3501-F571-4F90-B407-9AA893E002BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F1681D-CA45-4CA0-A60F-8F86B1A034C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F1681D-CA45-4CA0-A60F-8F86B1A034C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F1681D-CA45-4CA0-A60F-8F86B1A034C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F1681D-CA45-4CA0-A60F-8F86B1A034C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D00EF501-2887-4CBC-B6B3-E474C965BF40} = {D65E3638-A9E1-4878-AF2D-2D6B079452E3}
+		{8F948F36-ED2D-4D33-A1B1-55F406AE0A62} = {D65E3638-A9E1-4878-AF2D-2D6B079452E3}
+		{4D53C453-BD19-43BB-B937-C2971E7EDAAB} = {D65E3638-A9E1-4878-AF2D-2D6B079452E3}
+		{92FC3501-F571-4F90-B407-9AA893E002BE} = {D65E3638-A9E1-4878-AF2D-2D6B079452E3}
+		{51F1681D-CA45-4CA0-A60F-8F86B1A034C3} = {77233F54-7D1F-4627-AFAF-B483C53DC000}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {360DC4EC-318D-4B7A-AB82-11D80A39F6DD}

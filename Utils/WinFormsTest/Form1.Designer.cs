@@ -56,16 +56,18 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button12 = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button21 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -76,6 +78,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -145,6 +148,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -359,16 +363,6 @@
             this.tabPage5.Text = "窗体样式";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(9, 71);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(92, 23);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "通知栏提示";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // progressBar2
             // 
             this.progressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -378,6 +372,56 @@
             this.progressBar2.Size = new System.Drawing.Size(671, 34);
             this.progressBar2.TabIndex = 4;
             this.progressBar2.Visible = false;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(157, 99);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(99, 23);
+            this.button20.TabIndex = 7;
+            this.button20.Text = "打开文件/夹";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(157, 70);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(99, 23);
+            this.button19.TabIndex = 6;
+            this.button19.Text = "选择文件夹";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(157, 41);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(99, 23);
+            this.button18.TabIndex = 6;
+            this.button18.Text = "打开文件(单选)";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(157, 12);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(99, 23);
+            this.button17.TabIndex = 6;
+            this.button17.Text = "打开文件(单选)";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(9, 71);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(92, 23);
+            this.button12.TabIndex = 5;
+            this.button12.Text = "通知栏提示";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button14
             // 
@@ -411,45 +455,25 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             // 
-            // button17
+            // tabPage6
             // 
-            this.button17.Location = new System.Drawing.Point(157, 12);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(99, 23);
-            this.button17.TabIndex = 6;
-            this.button17.Text = "打开文件(单选)";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.tabPage6.Controls.Add(this.button21);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(792, 424);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "OpenCV";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // button21
             // 
-            this.button18.Location = new System.Drawing.Point(157, 41);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(99, 23);
-            this.button18.TabIndex = 6;
-            this.button18.Text = "打开文件(单选)";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(157, 70);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(99, 23);
-            this.button19.TabIndex = 6;
-            this.button19.Text = "选择文件夹";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(157, 99);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(99, 23);
-            this.button20.TabIndex = 7;
-            this.button20.Text = "打开文件/夹";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.button21.Location = new System.Drawing.Point(9, 4);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 23);
+            this.button21.TabIndex = 0;
+            this.button21.Text = "button21";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // Form1
             // 
@@ -469,6 +493,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -511,6 +536,8 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button button21;
     }
 }
 

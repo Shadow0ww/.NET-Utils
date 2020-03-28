@@ -10,6 +10,7 @@ using LibUsbDotNet.DeviceNotify;
 using LibUsbDotNet.DeviceNotify.Info;
 using System.Collections.Generic;
 using System.Text;
+using OpenCvSharp_Demo001;
 
 namespace WinFormsTest
 {
@@ -614,5 +615,14 @@ namespace WinFormsTest
         }
         #endregion
 
+        #region OpenCV
+        private void button21_Click(object sender, EventArgs e)
+        {
+            Test001 openCV = new Test001();
+            openCV.test001();
+        }
+
+
+        #endregion
     }
 }
